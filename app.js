@@ -1,3 +1,5 @@
+// Code version 1.0.0
+
 const inputbox = document.getElementById('inputbox')
 const insert = document.getElementById('insert')
 const listItems = document.getElementById('list-items')
@@ -14,18 +16,14 @@ inputbox.addEventListener('submit', ev => {
     deletButtons.textContent = 'Delet'
     newItem.appendChild(deletButtons)
 
-    deletButtons.addEventListener('click',function (e) {
-      
-        newItem.remove()
-                  
-    })
+    deletButtons.addEventListener('click',() => newItem.remove())
     
-
     insert.value = ""
 
     ev.preventDefault()
 })
 
-
 const clear = document.getElementById('clear') 
-clear.addEventListener('click', event => listItems.remove())
+clear.addEventListener('click', () => listItems.remove())
+
+// Code version 1.0.1
